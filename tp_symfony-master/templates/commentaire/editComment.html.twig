@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block titre %}Modification de commenatire{% endblock %}
+{% block body %}
+
+
+
+{{form_start(form_modifComment)}}
+{{form_widget(form_modifComment)}}
+<button type="submit" class="btn btn-success">Envoyer</button>
+{{form_end(form_modifComment)}}
+
+
+
+{% endblock %}

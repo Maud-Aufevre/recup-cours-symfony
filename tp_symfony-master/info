@@ -1,0 +1,3 @@
+A la plae de POST et GET on utilise Request $Request
+
+composer require vich/uploader-bundle Pour l'image upload

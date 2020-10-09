@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+ {% block titre %}Formulaire d'édition{% endblock %}
+{% block body %}
+
+{#{{form(form_edit)}}#}
+
+{#méthode a utiliser est avec row pour décomposer le formulaire#}
+{{form_start(form_edit)}}
+{{form_widget(form_edit)}}
+<button type="submit" class="btn btn-warning">Modifier</button>
+{{form_end(form_edit)}}
+{% endblock %}

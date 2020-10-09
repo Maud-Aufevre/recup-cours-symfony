@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+{% block titre %}Formulaire d'ajout{% endblock %}
+
+{% block body %}
+{# {{ form(formArticle) }} #}
+{{form_start(formArticle, {'action':path('article_add'),'method':'POST'})}}
+<div class="row">
+    <div class="col-6">
+        {{form_row(formArticle.titre)}}
+    </div>
+    <div class="col-6">
+        {{form_row(formArticle.auteur)}}
+    </div>
+
+</div>
+{#{{form_row(formArticle.image)}}#}
+{{form_label(formArticle.imageFile,'Votre URL')}}
+{{form_widget(formArticle.imageFile)}}
+{{form_errors(formArticle.imageFile)}}
+{{form_row(formArticle.description,{"attr":{},"label":"Description de l'aticle"})}}
+<button type="submit" class="btn btn-primary">Soumettre</button>
+{{form_end(formArticle)}}
+{% endblock %}
